@@ -29,7 +29,7 @@ public class GerenciarCarrinho {
                 item = items.getItem(id);
                 
                 if(item != null){
-                    item.setCount(item.getCount() + 1);
+                    item.setQtde(item.getQtde() + 1);
                 }
                 else {
                     Item novoItem = new Item(p);
@@ -51,8 +51,8 @@ public class GerenciarCarrinho {
             Item item = items.getItem(id);
 
             if(item != null){
-                if(item.getCount() > 1)
-                    item.setCount(item.getCount() - 1);
+                if(item.getQtde() > 1)
+                    item.setQtde(item.getQtde() - 1);
                 else 
                     items.remove(item);
             }
@@ -67,7 +67,7 @@ public class GerenciarCarrinho {
     public int getCarrinhoTam(){
         int tam = 0;
         for(Item item : items){
-            tam += item.getCount();
+            tam += item.getQtde();
         }
         return tam;
     }

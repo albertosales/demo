@@ -27,44 +27,45 @@ public class Item implements Serializable {
         this.qtde = 1;
     }
 
-    public void setCount(int count) {
-        this.qtde= count;
-    }
-
-    public int getCount() {
-        return qtde;
-    }
-
     public int getId() {
         return id;
     }
 
-    public String getName() {
-        return nome;
-    }
-
-    public String getDescription() {
-        return descricao;
-    }
-
     public void setId(int id) {
-        int oldId = id;
+        int antId = id;
         this.id = id;
-        propertySupport.firePropertyChange(ID, oldId, id);
+        propertySupport.firePropertyChange(ID, antId, id);
     }
 
-    public void setName(String name) {
-        String oldName = name;
-        this.nome = name;
-        propertySupport.firePropertyChange(NOME, oldName, name);
-    }
-
-    public void setDescription(String description) {
-        String oldDescription = description;
-        this.descricao = description;
-        propertySupport.firePropertyChange(DESCRICAO, oldDescription, description);
-    }
     
+    public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+        String antNome = nome;
+        this.nome = nome;
+        propertySupport.firePropertyChange(NOME, antNome, nome);
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+        String antDesc = descricao;
+        this.descricao = descricao;
+        propertySupport.firePropertyChange(DESCRICAO, antDesc, descricao);
+	}
+
+	public int getQtde() {
+		return qtde;
+	}
+
+	public void setQtde(int qtde) {
+		this.qtde = qtde;
+	}
+
     private PropertyChangeSupport propertySupport;
     
     public Item() {
