@@ -4,7 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>OnLineEJB</project>
-		<project>OnLine</project>
+		<project>OnLineJSF</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
